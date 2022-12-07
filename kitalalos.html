@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Találd ki a számot</title>
+ 
+    <style>
+
+   
+</style>
+
+
+   <script>
+    szam = Math.floor(Math.random()*100)
+
+    function vizsgal()
+    {
+        t = parseInt(document.getElementById("tipp").value)
+        
+        if(szam == t)   
+   {
+    document.getElementById("valasz").
+    innerHTML="Ez bizony a számod";
+    document.getElementById("valasz").style.
+    animationName="anim";
+
+   }
+   else if(Math.abs(szam-t)<4)   
+   {
+    document.getElementById("valasz").
+    innerHTML="Majdnem megvan a legendás szám";
+    document.getElementById("valasz").style.
+    backgroundColor="red";
+   }   
+   else if(Math.abs(szam-t)<8) 
+   {
+    document.getElementById("valasz").
+    innerHTML="jó fele tapogatózol";
+    document.getElementById("valasz").style.
+    backgroundColor="orange";
+   }       
+   else
+   {
+    document.getElementById("valasz").
+    innerHTML="Messze vagyol még a sikertől";
+    document.getElementById("valasz").style.
+    backgroundColor="lightblue";
+   }
+   if(szam>t)
+   document.getElementById("valasz").innerHTML+="↑";
+   else if(szam>t)
+   document.getElementById("valasz").innerHTML+="↓";
+} 
+
+</script>
+    
+</head>
+<body>
+    <div id="keret">
+        <input type="number" id="tipp">
+
+        <div id="gomb" onmouseover="vizsgal()">Tipp</div>
+
+        <p> Ha beírtad a tipped (1-100 között), vidd a gombra a kurzort!</p>
+
+        <h1 id="valasz">Tippelhetsz</h1>
+
+        
+        
+
+</div>
+</body>
+</html>

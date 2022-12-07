@@ -1,0 +1,49 @@
+html{
+     
+    background-image: url("594998_1664871219.1444.jpg");
+    background-size: cover;
+      
+}
+#keret
+{
+    margin: auto;
+    text-align: center;
+    
+  }  
+
+  input{
+    margin: 10px auto ;
+    border-radius: 4px;
+
+  }
+  #gomb{
+    width: 80px;
+    height: 20px;
+    background-color: darkgreen;
+    color: lightgreen;
+    border-radius: 8px;
+    margin: 0px auto;
+    box-shadow: 4px 4px #888888;
+  }
+  #gomb:hover {
+    box-shadow: none;
+    margin-top: 4px;
+    margin-bottom: -4px;
+  }
+
+  h1 {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin:0px auto;
+    background-color: lightgray;
+    animation-duration:  2s;
+    animation-iteration-count: infinite;
+
+  }
+
+@keyframes anim {
+    0% {background-color: green; color:white}
+    50% {background-color: lightgreen; color:black}
+    100% {background-color: green; color:white}
+}
